@@ -1,112 +1,41 @@
-# 🎓 KU Events Management System
+# 🎓 Karnavati University Events Portal
 
-## 📌 Project Overview
-This project is a full-stack web application for managing university events.  
-Users can browse events, register, and view their profile.
+A premium, full-stack event management system designed for **Karnavati University**. This platform allows students to discover upcoming campus events, register for workshops, manage their profiles, and stay updated through a modern, responsive interface.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### 👤 Authentication
-- User Registration
-- User Login
-- Logout functionality
-- Session handling using localStorage
-
-### 🎉 Events
-- View all events
-- Filter & search events
-- Register for events
-
-### 📊 User Profile
-- View logged-in user details
-- Logout option
+* **🔐 User Authentication**: Secure registration and login system for students.
+* **📅 Event Discovery**: Dynamic event grid with live search and category filtering (Tech, Cultural, Sports, Workshops).
+* **📝 One-Click Registration**: Authenticated users can instantly register for specific campus events.
+* **📧 Newsletter Integration**: Built-in subscription system to keep students informed about campus highlights.
+* **🗓️ Interactive Calendar**: A visual modal to track monthly university schedules.
+* **📱 Responsive UI**: Optimized for all devices—desktop, tablet, and mobile—using a modern, professional aesthetic.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- HTML
-- CSS
-- JavaScript
-
-### Backend
-- Node.js
-- Express.js
-
-### Database
-- MySQL
+* **Frontend**: HTML5, CSS3 (Custom Variables), and Vanilla JavaScript (ES6+).
+* **Backend**: Node.js and Express.js.
+* **Database**: MySQL.
+* **Typography**: Playfair Display & DM Sans via Google Fonts.
 
 ---
 
-## ⚙️ Setup Instructions
+## 📂 Project Structure
 
-### 1. Clone the repository
-```bash
-git clone <your-repo-link>
-cd kuevents
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Setup MySQL
-- Create database: `ku_events`
-- Run SQL scripts to create tables
-
-### 4. Start backend
-```bash
-node backend/server.js
-```
-
-### 5. Run frontend
-- Open `index.html` using Live Server
-
----
-
-## 📡 API Endpoints
-
-### Auth
-- POST `/api/auth/register`
-- POST `/api/auth/login`
-
-### Events
-- GET `/api/events`
-
-### Registration
-- POST `/api/register`
-- GET `/api/register/:userId`
-
-### Newsletter
-- POST `/api/newsletter`
-
----
-
-## 🧪 Usage Flow
-1. Register a new user
-2. Login
-3. Browse events
-4. Register for an event
-5. View profile & logout
-
----
-
-## 📌 Future Improvements
-- JWT Authentication
-- Admin panel
-- Event seat tracking
-- Cloud deployment (GCP)
-
----
-
-## 👨‍💻 Author
-Salman Shaikh
-
----
-
-## 📄 License
-This project is for educational purposes.
+```text
+├── backend/
+│   ├── routes/
+│   │   ├── auth.js        # Registration & Login logic
+│   │   ├── events.js      # Fetching event listings from DB
+│   │   ├── newsletter.js  # Newsletter subscription logic
+│   │   └── register.js    # Event registration logic
+│   ├── db.js              # MySQL Connection configuration
+│   └── server.js          # Express server entry point (Port 5000)
+├── frontend/
+│   ├── index.html         # Main User Interface
+│   ├── style.css          # Premium styling & animations
+│   └── script.js          # Frontend logic & API integration
